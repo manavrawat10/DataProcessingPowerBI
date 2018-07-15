@@ -1,0 +1,239 @@
+USE [ODSPROD_OA]
+
+GO
+
+ 
+
+/****** Object:  Table [dbo].[ods_backup_management]    Script Date: 7/13/2018 9:40:51 AM ******/
+
+SET ANSI_NULLS ON
+
+GO
+
+ 
+
+SET QUOTED_IDENTIFIER ON
+
+GO
+
+ 
+
+CREATE TABLE [dbo].[ods_backup_management](
+
+[job_id] [varchar](800) NOT NULL,
+
+[job_name] [varchar](max) NULL,
+
+[job_group] [varchar](max) NULL,
+
+[job_type] [varchar](max) NULL,
+
+[job_schedule] [varchar](max) NULL,
+
+[client] [varchar](max) NULL,
+
+[media_server] [varchar](max) NULL,
+
+[master_server] [varchar](max) NULL,
+
+[status] [varchar](max) NULL,
+
+[status_code] [int] NULL,
+
+[status_summary] [varchar](max) NULL,
+
+[error_code] [int] NULL,
+
+[error_summary] [varchar](512) NULL,
+
+[ran_in_window] [bit] NULL,
+
+[out_of_window_reason] [varchar](512) NULL,
+
+[scheduled_start] [datetime] NULL,
+
+[scheduled_end] [datetime] NULL,
+
+[actual_start] [varchar](50) NOT NULL,
+
+[actual_end] [varchar](50) NULL,
+
+[expiry_date] [datetime] NULL,
+
+[retention_duration] [varchar](64) NULL,
+
+[retention_valid] [bit] NULL,
+
+[compliance] [bit] NULL,
+
+[actual_size_gb] [bigint] NULL,
+
+[scanned_size_gb] [bigint] NULL,
+
+[data_backedup_gb] [float] NULL,
+
+[data_not_sent_gb] [bigint] NULL,
+
+[throughput_kbps] [bigint] NULL,
+
+[files_backedup] [bigint] NULL,
+
+[files_not_backedup] [bigint] NULL,
+
+[project_id] [varchar](32) NOT NULL,
+
+[customer_id] [varchar](32) NOT NULL,
+
+[inserted_at] [datetime] NULL,
+
+[inserted_by] [varchar](max) NULL,
+
+[has_breached] [varchar](max) NULL,
+
+[job_policy] [varchar](max) NULL,
+
+CONSTRAINT [PK__ods_back__73738C4218CD36F9] PRIMARY KEY CLUSTERED
+
+(
+
+[job_id] ASC,
+
+[actual_start] ASC
+
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+
+ 
+
+ALTER TABLE [dbo].[ods_backup_management]  WITH CHECK ADD FOREIGN KEY([customer_id])
+
+REFERENCES [dbo].[ods_customer] ([cust_id])
+
+GO
+
+ 
+
+ALTER TABLE [dbo].[ods_backup_management]  WITH CHECK ADD FOREIGN KEY([customer_id])
+
+REFERENCES [dbo].[ods_customer] ([cust_id])
+
+GO
+
+ 
+
+ALTER TABLE [dbo].[ods_backup_management]  WITH CHECK ADD FOREIGN KEY([customer_id])
+
+REFERENCES [dbo].[ods_customer] ([cust_id])
+
+GO
+
+ 
+
+ALTER TABLE [dbo].[ods_backup_management]  WITH CHECK ADD FOREIGN KEY([customer_id])
+
+REFERENCES [dbo].[ods_customer] ([cust_id])
+
+GO
+
+ 
+
+ALTER TABLE [dbo].[ods_backup_management]  WITH CHECK ADD FOREIGN KEY([customer_id])
+
+REFERENCES [dbo].[ods_customer] ([cust_id])
+
+GO
+
+ 
+
+ALTER TABLE [dbo].[ods_backup_management]  WITH CHECK ADD FOREIGN KEY([customer_id])
+
+REFERENCES [dbo].[ods_customer] ([cust_id])
+
+GO
+
+ 
+
+ALTER TABLE [dbo].[ods_backup_management]  WITH CHECK ADD FOREIGN KEY([customer_id])
+
+REFERENCES [dbo].[ods_customer] ([cust_id])
+
+GO
+
+ 
+
+ALTER TABLE [dbo].[ods_backup_management]  WITH CHECK ADD FOREIGN KEY([customer_id])
+
+REFERENCES [dbo].[ods_customer] ([cust_id])
+
+GO
+
+ 
+
+ALTER TABLE [dbo].[ods_backup_management]  WITH CHECK ADD FOREIGN KEY([project_id])
+
+REFERENCES [dbo].[ods_project] ([project_id])
+
+GO
+
+ 
+
+ALTER TABLE [dbo].[ods_backup_management]  WITH CHECK ADD FOREIGN KEY([project_id])
+
+REFERENCES [dbo].[ods_project] ([project_id])
+
+GO
+
+ 
+
+ALTER TABLE [dbo].[ods_backup_management]  WITH CHECK ADD FOREIGN KEY([project_id])
+
+REFERENCES [dbo].[ods_project] ([project_id])
+
+GO
+
+ 
+
+ALTER TABLE [dbo].[ods_backup_management]  WITH CHECK ADD FOREIGN KEY([project_id])
+
+REFERENCES [dbo].[ods_project] ([project_id])
+
+GO
+
+ 
+
+ALTER TABLE [dbo].[ods_backup_management]  WITH CHECK ADD FOREIGN KEY([project_id])
+
+REFERENCES [dbo].[ods_project] ([project_id])
+
+GO
+
+ 
+
+ALTER TABLE [dbo].[ods_backup_management]  WITH CHECK ADD FOREIGN KEY([project_id])
+
+REFERENCES [dbo].[ods_project] ([project_id])
+
+GO
+
+ 
+
+ALTER TABLE [dbo].[ods_backup_management]  WITH CHECK ADD FOREIGN KEY([project_id])
+
+REFERENCES [dbo].[ods_project] ([project_id])
+
+GO
+
+ 
+
+ALTER TABLE [dbo].[ods_backup_management]  WITH CHECK ADD FOREIGN KEY([project_id])
+
+REFERENCES [dbo].[ods_project] ([project_id])
+
+GO
+
+ 
+
+ 
